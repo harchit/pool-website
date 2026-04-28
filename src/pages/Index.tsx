@@ -92,16 +92,16 @@ const Index = () => {
               Serving Brampton & Surrounding Areas
             </div>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1]">
-              On-Sight <span className="text-blue-600">Plumbers of Brampton</span>
+              Apna <span className="text-blue-600">Plumbers of Brampton</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-xl leading-relaxed mt-4">
-              From emergency repairs to routine maintenance, On-Sight Plumbers of Brampton provides expert solutions with a focus on quality and customer satisfaction. Your local Brampton plumbing experts.
+              From emergency repairs to routine maintenance, Apna Plumbers of Brampton provides expert solutions with a focus on quality and customer satisfaction. Your local Brampton plumbing experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-200">
-                <a href="tel:2899073904" className="flex items-center gap-2">
+                <a href="tel:6479529762" className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
-                  Call (289) 907-3904
+                  Call (647) 952-9762
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
@@ -275,9 +275,9 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 py-8 text-xl shadow-xl shadow-blue-900/20">
-                  <a href="tel:2899073904" className="flex items-center gap-3">
+                  <a href="tel:6479529762" className="flex items-center gap-3">
                     <Phone className="h-6 w-6" />
-                    (289) 907-3904
+                    (647) 952-9762
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full px-10 py-8 text-xl border-2 border-white !text-white hover:bg-white hover:!text-slate-900 transition-all bg-transparent">
@@ -302,14 +302,14 @@ const Index = () => {
           </div>
           <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white h-[500px] relative">
             <iframe
-              src="https://maps.google.com/maps?q=10095%20Bramalea%20Rd,%20Brampton,%20ON%20L6R%200K1&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=9715%20James%20Potter%20Rd,%20Brampton,%20ON%20L6X%203B9&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="On-Sight Plumbers of Brampton Location"
+              title="Apna Plumbers of Brampton Location"
             ></iframe>
           </div>
         </div>

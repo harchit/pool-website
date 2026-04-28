@@ -87,7 +87,7 @@ const Services = () => {
                       ))}
                     </ul>
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-6">
-                      <a href="tel:2899073904" className="flex items-center justify-center gap-2">
+                      <a href="tel:6479529762" className="flex items-center justify-center gap-2">
                         <Phone className="h-4 w-4" />
                         Book This Service
                       </a>
@@ -141,7 +141,7 @@ const Services = () => {
               ))}
             </ul>
             <Button asChild className="bg-slate-900 hover:bg-slate-800 text-white rounded-full w-fit px-8 py-6">
-              <a href="tel:2899073904">Get a Commercial Quote</a>
+              <a href="tel:6479529762">Get a Commercial Quote</a>
             </Button>
           </div>
         </div>
@@ -157,9 +157,9 @@ const Services = () => {
                 We handle all types of plumbing projects, big and small. Give our Brampton plumbers a call to discuss your specific needs and get a free estimate.
               </p>
               <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-10 py-8 text-xl shadow-xl">
-                <a href="tel:2899073904" className="flex items-center gap-3">
+                <a href="tel:6479529762" className="flex items-center gap-3">
                   <Phone className="h-6 w-6" />
-                  (289) 907-3904
+                  (647) 952-9762
                 </a>
               </Button>
             </div>

@@ -47,7 +47,7 @@ const About = () => {
             <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm">Our Story</h2>
             <h3 className="text-4xl font-bold text-slate-900">Serving Brampton with Pride</h3>
             <p className="text-slate-600 leading-relaxed">
-              On-Sight Plumbers of Brampton was founded with a simple mission: to provide high-quality plumbing services that homeowners and businesses can rely on. 
+              Apna Plumbers of Brampton was founded with a simple mission: to provide high-quality plumbing services that homeowners and businesses can rely on. 
               We saw a need for a Brampton plumbing company that combines technical expertise with a personal touch.
             </p>
             <p className="text-slate-600 leading-relaxed">
@@ -166,9 +166,9 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 py-8 text-xl">
-              <a href="tel:2899073904" className="flex items-center gap-3">
+              <a href="tel:6479529762" className="flex items-center gap-3">
                 <Phone className="h-6 w-6" />
-                (289) 907-3904
+                (647) 952-9762
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full px-10 py-8 text-xl border-2 border-white text-white hover:bg-white hover:text-slate-900 transition-all">

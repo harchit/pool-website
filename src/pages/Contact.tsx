@@ -31,19 +31,19 @@ const Contact = () => {
   const contactInfo = [
     {
       title: "Our Location",
-      content: "10095 Bramalea Rd, Brampton, ON L6R 0K1",
+      content: "9715 James Potter Rd, Brampton, ON L6X 3B9",
       icon: <MapPin className="h-6 w-6 text-blue-600" />,
     },
     {
       title: "Phone Number",
-      content: "(289) 907-3904",
-      link: "tel:2899073904",
+      content: "(647) 952-9762",
+      link: "tel:6479529762",
       icon: <Phone className="h-6 w-6 text-blue-600" />,
     },
     {
       title: "Email Address",
-      content: "info@onsightplumbersofbrampton.site",
-      link: "mailto:info@onsightplumbersofbrampton.site",
+      content: "info@apnaplumbersofbrampton.ca",
+      link: "mailto:info@apnaplumbersofbrampton.ca",
       icon: <Mail className="h-6 w-6 text-blue-600" />,
     },
     {
@@ -108,14 +108,14 @@ const Contact = () => {
             {/* Map Section */}
             <div className="rounded-3xl overflow-hidden shadow-lg h-64 bg-slate-200 relative">
               <iframe
-                src="https://maps.google.com/maps?q=10095%20Bramalea%20Rd,%20Brampton,%20ON%20L6R%200K1&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=9715%20James%20Potter%20Rd,%20Brampton,%20ON%20L6X%203B9&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="On-Sight Plumbers of Brampton Location"
+                title="Apna Plumbers of Brampton Location"
               ></iframe>
             </div>
           </div>
@@ -163,7 +163,7 @@ const Contact = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="(289) 907-3904" required className="rounded-xl py-6" />
+                  <Input id="phone" type="tel" placeholder="(647) 952-9762" required className="rounded-xl py-6" />
                 </div>
 
                 <div className="space-y-2">
