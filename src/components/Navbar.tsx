@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Menu, X, Droplets } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -19,7 +19,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
+    { name: "Vinyl Pools", path: "/vinyl-pools" },
+    { name: "Fiberglass", path: "/fiberglass-pools" },
+    { name: "Concrete", path: "/concrete-pools" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -32,22 +34,20 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-700 transition-colors">
-            <Droplets className="text-white h-6 w-6" />
-          </div>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img src="/logo.png" alt="Bluestone Pool Construction Logo" className="h-12 w-12 rounded-full object-cover border-2 border-blue-600/20" />
           <div className="flex flex-col">
-            <span className={cn("font-bold text-xl leading-none", scrolled ? "text-blue-900" : "text-blue-900")}>
-              Apna
+            <span className={cn("font-bold text-xl leading-none", scrolled ? "text-slate-900" : "text-slate-900")}>
+              Bluestone
             </span>
             <span className={cn("text-xs font-medium tracking-wider uppercase", scrolled ? "text-blue-600" : "text-blue-600")}>
-              Plumbers of Brampton
+              Pool Construction
             </span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -61,9 +61,9 @@ const Navbar = () => {
             </Link>
           ))}
           <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6">
-            <a href="tel:6479529762" className="flex items-center gap-2">
+            <a href="tel:6479655067" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              (647) 952-9762
+              (647) 965-5067
             </a>
           </Button>
         </div>
@@ -94,9 +94,9 @@ const Navbar = () => {
             </Link>
           ))}
           <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white w-full py-6 text-lg">
-            <a href="tel:6479529762" className="flex items-center justify-center gap-2">
+            <a href="tel:6479655067" className="flex items-center justify-center gap-2">
               <Phone className="h-5 w-5" />
-              (647) 952-9762
+              (647) 965-5067
             </a>
           </Button>
         </div>

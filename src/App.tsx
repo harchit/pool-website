@@ -9,6 +9,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import StickyCallButton from "./components/StickyCallButton";
+import VinylPools from "./pages/VinylPools";
+import FiberglassPools from "./pages/FiberglassPools";
+import ConcretePools from "./pages/ConcretePools";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +27,9 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/vinyl-pools" element={<VinylPools />} />
+          <Route path="/fiberglass-pools" element={<FiberglassPools />} />
+          <Route path="/concrete-pools" element={<ConcretePools />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

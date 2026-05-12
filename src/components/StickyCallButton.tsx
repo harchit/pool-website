@@ -8,7 +8,6 @@ const StickyCallButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show button after scrolling 100px
       setIsVisible(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
@@ -26,9 +25,9 @@ const StickyCallButton = () => {
         asChild
         className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-full py-8 text-xl font-bold shadow-2xl shadow-blue-900/40 flex items-center justify-center gap-3 border-2 border-white/20 backdrop-blur-sm"
       >
-        <a href="tel:6479529762">
+        <a href="tel:6479655067">
           <Phone className="h-6 w-6 animate-pulse" />
-          Call (647) 952-9762
+          Call (647) 965-5067
         </a>
       </Button>
     </div>

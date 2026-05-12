@@ -30,25 +30,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      title: "Our Location",
-      content: "9715 James Potter Rd, Brampton, ON L6X 3B9",
+      title: "Service Areas",
+      content: "Houston, Dallas, San Antonio (Texas)",
       icon: <MapPin className="h-6 w-6 text-blue-600" />,
     },
     {
       title: "Phone Number",
-      content: "(647) 952-9762",
-      link: "tel:6479529762",
+      content: "(647) 965-5067",
+      link: "tel:6479655067",
       icon: <Phone className="h-6 w-6 text-blue-600" />,
     },
     {
       title: "Email Address",
-      content: "info@apnaplumbersofbrampton.ca",
-      link: "mailto:info@apnaplumbersofbrampton.ca",
+      content: "info@bluestonepoolconstruction.com",
+      link: "mailto:info@bluestonepoolconstruction.com",
       icon: <Mail className="h-6 w-6 text-blue-600" />,
     },
     {
-      title: "Working Hours",
-      content: "24/7 Emergency Service Available",
+      title: "Business Hours",
+      content: "Mon - Fri: 8:00 AM - 6:00 PM",
       icon: <Clock className="h-6 w-6 text-blue-600" />,
     },
   ];
@@ -62,10 +62,9 @@ const Contact = () => {
         <div className="absolute inset-0 bg-blue-600/10" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-extrabold mb-6">Contact Our <span className="text-blue-400">Brampton Plumbers</span></h1>
+            <h1 className="text-5xl font-extrabold mb-6">Contact <span className="text-blue-400">Bluestone</span></h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Have a plumbing emergency or need a quote for a project? 
-              Reach out to our expert Brampton plumbers today and our team will be happy to assist you.
+              Ready to build your dream pool? Reach out to our design and construction experts to schedule your consultation in Houston, Dallas, or San Antonio.
             </p>
           </div>
         </div>
@@ -78,10 +77,9 @@ const Contact = () => {
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-6">
               <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm">Get In Touch</h2>
-              <h3 className="text-4xl font-bold text-slate-900">Expert Brampton Plumbing Help</h3>
+              <h3 className="text-4xl font-bold text-slate-900">Start Your Backyard Transformation</h3>
               <p className="text-slate-600 leading-relaxed">
-                Whether it's a small leak or a major renovation, we're ready to provide the expert Brampton plumbing solutions you need. 
-                Call us for immediate assistance or fill out the form and we'll get back to you shortly.
+                Whether you're interested in a custom vinyl, fiberglass, or concrete pool, our team is ready to answer your questions and provide a detailed estimate.
               </p>
             </div>
 
@@ -104,19 +102,16 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-
-            {/* Map Section */}
-            <div className="rounded-3xl overflow-hidden shadow-lg h-64 bg-slate-200 relative">
-              <iframe
-                src="https://maps.google.com/maps?q=9715%20James%20Potter%20Rd,%20Brampton,%20ON%20L6X%203B9&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Apna Plumbers of Brampton Location"
-              ></iframe>
+            
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 mt-auto">
+                <h4 className="font-bold text-slate-900 text-lg mb-2">Schedule a Free Consultation</h4>
+                <p className="text-slate-600 mb-6">We'll visit your property, discuss your vision, and provide a comprehensive plan for your new pool.</p>
+                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-6">
+                    <a href="tel:6479655067" className="flex items-center justify-center gap-2">
+                        <Phone className="h-4 w-4" />
+                        Call Now
+                    </a>
+                </Button>
             </div>
           </div>
 
@@ -129,7 +124,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-3xl font-bold text-slate-900">Thank You!</h3>
                 <p className="text-slate-600 text-lg max-w-sm">
-                  Your message has been sent successfully. One of our Brampton plumbers will contact you shortly.
+                  Your inquiry has been sent successfully. One of our pool design specialists will contact you shortly.
                 </p>
                 <Button 
                   onClick={() => setIsSubmitted(false)}
@@ -141,8 +136,8 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-2xl font-bold text-slate-900">Send a Message</h3>
-                  <p className="text-slate-500">Fill out the form below and our Brampton plumbers will get back to you within 24 hours.</p>
+                  <h3 className="text-2xl font-bold text-slate-900">Request a Quote</h3>
+                  <p className="text-slate-500">Fill out the form below and we'll be in touch to discuss your project.</p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -163,30 +158,29 @@ const Contact = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="(647) 952-9762" required className="rounded-xl py-6" />
+                  <Input id="phone" type="tel" placeholder="(647) 965-5067" required className="rounded-xl py-6" />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="service">Service Needed</Label>
+                  <Label htmlFor="service">Pool Interest</Label>
                   <select 
                     id="service" 
                     className="w-full h-12 px-4 rounded-xl border border-input bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     required
                   >
-                    <option value="">Select a service</option>
-                    <option value="emergency">Emergency Repair</option>
-                    <option value="drain">Drain Cleaning</option>
-                    <option value="water-heater">Water Heater</option>
-                    <option value="installation">New Installation</option>
-                    <option value="other">Other</option>
+                    <option value="">Select pool type</option>
+                    <option value="vinyl">Vinyl Liner Pool</option>
+                    <option value="fiberglass">Fiberglass Pool</option>
+                    <option value="concrete">Custom Concrete Pool</option>
+                    <option value="unsure">Not Sure Yet</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Your Message</Label>
+                  <Label htmlFor="message">Project Details</Label>
                   <Textarea 
                     id="message" 
-                    placeholder="Tell our Brampton plumbers about your issue..." 
+                    placeholder="Tell us about your backyard and what you're looking for..." 
                     required 
                     className="rounded-xl min-h-[150px] p-4"
                   />
