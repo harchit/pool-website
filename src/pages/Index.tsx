@@ -23,7 +23,7 @@ const Index = () => {
     {
       title: "Custom Concrete Pools",
       description: "The ultimate in luxury and durability. Concrete (Gunite) pools can be built to any size, shape, or depth with premium finishes.",
-      image: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&q=80&w=1000",
+      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1000",
       link: "/concrete-pools"
     }
   ];
@@ -170,7 +170,7 @@ const Index = () => {
           <div className="order-2 lg:order-1">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <img src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&q=80&w=800" alt="Beautiful Texas Pool" className="rounded-2xl shadow-lg w-full aspect-square object-cover" />
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" alt="Beautiful Texas Pool" className="rounded-2xl shadow-lg w-full aspect-square object-cover" />
                 <div className="bg-blue-600 p-8 rounded-2xl text-white shadow-lg">
                   <p className="text-4xl font-bold mb-2">100%</p>
                   <p className="text-sm font-medium opacity-80 uppercase tracking-wider">Custom Designs</p>
