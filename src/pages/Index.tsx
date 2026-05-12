@@ -53,14 +53,14 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[85vh]">
         {/* Background Image & Dark Overlay */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-slate-900">
           <img 
             src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=2000" 
             alt="Luxury Custom Pool Construction Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-80"
           />
-          {/* Gradient that is darker on the left to make text legible */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-slate-900/20" />
+          {/* Gradient that is darker on the left to make text legible, but overall more transparent */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
