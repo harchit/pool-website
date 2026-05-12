@@ -30,17 +30,17 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-3" : "bg-transparent"
+        scrolled ? "bg-slate-900/95 backdrop-blur-md shadow-md py-3 border-b border-white/10" : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src="/logo.png" alt="Bluestone Pool Construction Logo" className="h-12 w-12 rounded-full object-cover border-2 border-blue-600/20" />
+          <img src="/logo.png" alt="Bluestone Pool Construction Logo" className="h-12 w-12 rounded-full object-cover border-2 border-white/20" />
           <div className="flex flex-col">
-            <span className={cn("font-bold text-xl leading-none", scrolled ? "text-slate-900" : "text-slate-900")}>
+            <span className="font-bold text-xl leading-none text-white">
               Bluestone
             </span>
-            <span className={cn("text-xs font-medium tracking-wider uppercase", scrolled ? "text-blue-600" : "text-blue-600")}>
+            <span className="text-xs font-medium tracking-wider uppercase text-blue-400">
               Pool Construction
             </span>
           </div>
@@ -53,14 +53,14 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={cn(
-                "text-sm font-semibold transition-colors hover:text-blue-600",
-                location.pathname === link.path ? "text-blue-600" : "text-slate-700"
+                "text-sm font-semibold transition-colors hover:text-blue-400",
+                location.pathname === link.path ? "text-blue-400" : "text-white"
               )}
             >
               {link.name}
             </Link>
           ))}
-          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6">
+          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 border-none">
             <a href="tel:6479655067" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
               (647) 965-5067
@@ -70,7 +70,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-slate-700"
+          className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -79,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t shadow-xl p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-5">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900 border-t border-white/10 shadow-xl p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-5">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -87,13 +87,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className={cn(
                 "text-lg font-semibold",
-                location.pathname === link.path ? "text-blue-600" : "text-slate-700"
+                location.pathname === link.path ? "text-blue-400" : "text-white"
               )}
             >
               {link.name}
             </Link>
           ))}
-          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white w-full py-6 text-lg">
+          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white w-full py-6 text-lg border-none">
             <a href="tel:6479655067" className="flex items-center justify-center gap-2">
               <Phone className="h-5 w-5" />
               (647) 965-5067
