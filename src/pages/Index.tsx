@@ -23,7 +23,7 @@ const Index = () => {
     {
       title: "Custom Concrete Pools",
       description: "The ultimate in luxury and durability. Concrete (Gunite) pools can be built to any size, shape, or depth with premium finishes.",
-      image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1000",
+      image: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&q=80&w=1000",
       link: "/concrete-pools"
     }
   ];
@@ -51,42 +51,52 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-12 lg:pt-40 lg:pb-16 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50 rounded-bl-[100px] hidden lg:block" />
-          <div className="absolute top-1/4 left-0 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[85vh]">
+        {/* Background Image & Dark Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=2000" 
+            alt="Luxury Custom Pool Construction Background" 
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient that is darker on the left to make text legible */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-slate-900/20" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-4">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider w-fit">
-              <MapPin className="h-4 w-4" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+          <div className="flex flex-col gap-6 max-w-2xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider w-fit">
+              <MapPin className="h-4 w-4 text-blue-400" />
               Serving Houston, Dallas & San Antonio
             </div>
-            <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1]">
-              Build Your Dream <span className="text-blue-600">Backyard Oasis</span>
+            
+            <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-[1.1]">
+              Build Your Dream <span className="text-blue-400">Backyard Oasis</span>
             </h1>
-            <p className="text-lg text-slate-600 max-w-xl leading-relaxed mt-4">
+            
+            <p className="text-lg lg:text-xl text-slate-200 max-w-xl leading-relaxed mt-2">
               Bluestone Pool Construction specializes in custom vinyl, fiberglass, and concrete pools. Transform your outdoor living space with Texas's premier pool builders.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-200">
+            
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-900/20">
                 <a href="tel:6479655067" className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
                   Call (647) 965-5067
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
+              <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-lg border-2 border-white text-white hover:bg-white hover:text-slate-900 transition-colors bg-transparent">
                 <a href="#pool-types" className="flex items-center gap-2">
                   View Pool Types
                   <ArrowRight className="h-5 w-5" />
                 </a>
               </Button>
             </div>
-            <div className="flex items-center gap-4 pt-4">
+            
+            <div className="flex items-center gap-4 pt-8">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center overflow-hidden">
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-200 flex items-center justify-center overflow-hidden shadow-sm">
                     <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Happy Customer" />
                   </div>
                 ))}
@@ -97,29 +107,21 @@ const Index = () => {
                     <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <span className="text-sm font-bold text-slate-700">Hundreds of Happy Texas Families</span>
+                <span className="text-sm font-bold text-white">Hundreds of Happy Texas Families</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="relative">
-            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
-              <img 
-                src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=1000" 
-                alt="Luxury Custom Pool Construction" 
-                className="w-full h-full object-cover"
-              />
+        {/* Floating Badge moved to the bottom right for the new layout */}
+        <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-2xl z-20 hidden lg:block border border-white/20">
+          <div className="flex items-center gap-4">
+            <div className="bg-blue-500/20 p-3 rounded-full">
+              <ShieldCheck className="h-6 w-6 text-blue-400" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block">
-              <div className="flex items-center gap-4">
-                <div className="bg-blue-100 p-3 rounded-full">
-                  <ShieldCheck className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-slate-900">Licensed & Insured</p>
-                  <p className="text-xs text-slate-500">Expert Pool Builders</p>
-                </div>
-              </div>
+            <div>
+              <p className="text-sm font-bold text-white">Licensed & Insured</p>
+              <p className="text-xs text-slate-300">Expert Pool Builders</p>
             </div>
           </div>
         </div>
