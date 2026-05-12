@@ -1,8 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MapPin, ArrowRight, Star, ShieldCheck, Waves, Sun, Sparkles } from "lucide-react";
+import { Phone, MapPin, ArrowRight, Star, ShieldCheck } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -12,19 +11,19 @@ const Index = () => {
     {
       title: "Vinyl Liner Pools",
       description: "Highly customizable and affordable. Vinyl pools offer a smooth surface and endless shape possibilities for your dream backyard.",
-      icon: <Waves className="h-6 w-6 text-blue-600" />,
+      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=1000",
       link: "/vinyl-pools"
     },
     {
       title: "Fiberglass Pools",
       description: "Durable, low maintenance, and quick to install. Enjoy a beautiful, smooth finish that resists algae and lasts for decades.",
-      icon: <Sparkles className="h-6 w-6 text-blue-600" />,
+      image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1000",
       link: "/fiberglass-pools"
     },
     {
       title: "Custom Concrete Pools",
       description: "The ultimate in luxury and durability. Concrete (Gunite) pools can be built to any size, shape, or depth with premium finishes.",
-      icon: <Sun className="h-6 w-6 text-blue-600" />,
+      image: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&q=80&w=1000",
       link: "/concrete-pools"
     }
   ];
@@ -137,20 +136,29 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {poolTypes.map((pool, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden group bg-white flex flex-col h-full">
-                <CardHeader className="p-6 pb-4">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-xl w-fit group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                    {pool.icon}
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-slate-900">{pool.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-6 pt-0 flex-grow flex flex-col">
-                  <p className="text-slate-600 mb-6 leading-relaxed flex-grow">{pool.description}</p>
-                  <Link to={pool.link} className="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all mt-auto inline-flex w-fit">
+              <Link 
+                key={index} 
+                to={pool.link} 
+                className="group relative h-[450px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-end"
+              >
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${pool.image})` }}
+                />
+                
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/50 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
+                
+                {/* Content */}
+                <div className="relative z-10 p-8 flex flex-col gap-3 transform transition-transform duration-300 group-hover:-translate-y-2">
+                  <h4 className="text-2xl font-bold text-white">{pool.title}</h4>
+                  <p className="text-slate-300 leading-relaxed text-sm">{pool.description}</p>
+                  <div className="text-blue-400 font-bold flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:gap-3">
                     Learn More <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </CardContent>
-              </Card>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
