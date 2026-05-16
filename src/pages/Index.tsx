@@ -6,13 +6,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import concretePoolImg from "@/assets/concrete-pool.jpg";
+import vinylPoolImg from "@/assets/vinyl-pool.jpg";
 
 const Index = () => {
   const poolTypes = [
     {
       title: "Vinyl Liner Pools",
       description: "Highly customizable and affordable. Vinyl pools offer a smooth surface and endless shape possibilities for your dream backyard.",
-      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=1000",
+      image: vinylPoolImg,
       link: "/vinyl-pools"
     },
     {
