@@ -1,8 +1,11 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import concretePoolImg from "@/assets/concrete-pool.jpg";
 
 const ConcretePools = () => {
   const benefits = [
@@ -35,7 +38,7 @@ const ConcretePools = () => {
           </div>
           <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
             <img 
-              src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&q=80&w=1000" 
+              src={concretePoolImg} 
               alt="Custom Concrete Pool" 
               className="w-full h-full object-cover"
             />
