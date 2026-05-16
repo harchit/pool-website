@@ -5,6 +5,7 @@ import { Phone, MapPin, ArrowRight, Star, ShieldCheck } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import concretePoolImg from "@/assets/concrete-pool.jpg";
 
 const Index = () => {
   const poolTypes = [
@@ -23,7 +24,7 @@ const Index = () => {
     {
       title: "Custom Concrete Pools",
       description: "The ultimate in luxury and durability. Concrete (Gunite) pools can be built to any size, shape, or depth with premium finishes.",
-      image: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&q=80&w=1000",
+      image: concretePoolImg,
       link: "/concrete-pools"
     }
   ];
