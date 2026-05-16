@@ -1,8 +1,11 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import fiberglassPoolImg from "@/assets/fiberglass-pool.jpg";
 
 const VinylPools = () => {
   const benefits = [
@@ -53,7 +56,7 @@ const VinylPools = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-3xl overflow-hidden shadow-lg h-full">
                <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
+                src={fiberglassPoolImg} 
                 alt="Vinyl Pool Patterns" 
                 className="w-full h-full object-cover"
               />
