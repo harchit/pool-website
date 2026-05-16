@@ -23,7 +23,7 @@ const Index = () => {
     {
       title: "Custom Concrete Pools",
       description: "The ultimate in luxury and durability. Concrete (Gunite) pools can be built to any size, shape, or depth with premium finishes.",
-      image: "/concrete-pool.jpg",
+      image: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&q=80&w=1000",
       link: "/concrete-pools"
     }
   ];
@@ -55,7 +55,7 @@ const Index = () => {
         {/* Background Image & Dark Overlay */}
         <div className="absolute inset-0 z-0 bg-slate-900">
           <img 
-            src="/concrete-pool.jpg" 
+            src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=2000" 
             alt="Luxury Custom Pool Construction Background" 
             className="w-full h-full object-cover opacity-80"
           />
