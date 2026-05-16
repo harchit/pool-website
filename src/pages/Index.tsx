@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import concretePoolImg from "@/assets/concrete-pool.jpg";
 import vinylPoolImg from "@/assets/vinyl-pool.jpg";
+import fiberglassPoolImg from "@/assets/fiberglass-pool.jpg";
 
 const Index = () => {
   const poolTypes = [
@@ -19,7 +20,7 @@ const Index = () => {
     {
       title: "Fiberglass Pools",
       description: "Durable, low maintenance, and quick to install. Enjoy a beautiful, smooth finish that resists algae and lasts for decades.",
-      image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=1000",
+      image: fiberglassPoolImg,
       link: "/fiberglass-pools"
     },
     {
